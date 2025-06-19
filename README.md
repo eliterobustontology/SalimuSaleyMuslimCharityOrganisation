@@ -1,2 +1,0 @@
-# SalimuSaleyMuslimCharityOrganisation
-Salimu
