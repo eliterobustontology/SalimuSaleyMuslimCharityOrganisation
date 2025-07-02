@@ -3,84 +3,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>salimu Saley Muslim Charity Organisation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salimu Saley Muslim Charity - Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    /* Material theme style */
+    body {
+      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #f3f6f9;
+      margin: 0;
+      padding-top: 70px;
+      color: #263238;
+    }
+    /* Navbar */
+    .navbar-custom {
+      background-color: #3f51b5; /* Indigo */
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+      color: white;
+    }
+    .navbar-custom .nav-link:hover {
+      color: #ffca28; /* Amber */
+    }
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+    .hero h1 {
+      font-weight: 700;
+      font-size: 3rem;
+    }
+    /* Section styling */
+    section {
+      padding: 40px 15px;
+    }
+    /* Cards */
+    .card {
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    /* Make the whole card clickable */
+    .card-link {
+      display: block;
+      color: inherit;
+    }
+    .card-link:hover .card {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      text-decoration: none;
+    }
+    /* Footer */
+    footer {
+      background-color: #3f51b5;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    .icons{
+        width: 30px;
+        height: 30px;
+    }
+  </style>
 </head>
-<style>
-html,body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-}
-
-.loading-container {
-  background-color: #ffffff;
-  color: #000000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-.spinner {
-  width: 60px;
-  height: 60px;
-  border: 6px solid #333333;
-  border-top: 6px solid #00bfff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: 0 auto 20px auto;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loading-text {
-  font-size: 1.2rem;
-  color: #000000;
-}
-</style>
 <body>
-  <div class="loading-container">
-    <div>
-      <div class="spinner"></div>
-      <p class="loading-text">Please Wait</p>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <span class="material-icons"><img class="icons" src="logo.png"></span> Salimu Saley Muslim Charity Organisation
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="material-icons">menu</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
   </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero text-center">
+  <h1>Helping the Needy, Strengthening Faith</h1>
+</div>
+
+<!-- About Section -->
+<section class="container">
+  <h2 class="mb-4 text-center">Our Mission</h2>
+  <p class="lead text-center">
+    Salimu Saley Muslim Charity Organisation is committed to supporting the needy and uplifting communities by providing essential aid and strengthening religious values.
+  </p>
+
+  <div class="row text-center mt-5">
+    <div class="col-md-4 mb-4">
+      <a href="food-aid.html" class="card-link text-decoration-none" aria-label="Food Aid project page">
+        <div class="card p-4 h-100">
+          <span class="material-icons md-48 text-primary">local_grocery_store</span>
+          <h5 class="mt-3">Food Aid</h5>
+          <p>We distribute food packages to families facing hardship.</p>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 mb-4">
+      <a href="education-support.html" class="card-link text-decoration-none" aria-label="Education Support project page">
+        <div class="card p-4 h-100">
+          <span class="material-icons md-48 text-primary">school</span>
+          <h5 class="mt-3">Education Support</h5>
+          <p>Providing resources and scholarships for students in need.</p>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 mb-4">
+      <a href="religious-activities.html" class="card-link text-decoration-none" aria-label="Religious Activities project page">
+        <div class="card p-4 h-100">
+          <span class="material-icons md-48 text-primary">mosque</span>
+          <h5 class="mt-3">Religious Activities</h5>
+          <p>Organizing events and programs to strengthen faith and community.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-primary text-white text-center py-5">
+  <div class="container">
+    <h3>Join Us in Making a Difference</h3>
+    <p>Donate or volunteer today to help those in need and support our mission.</p>
+    <a href="contact.html" class="btn btn-warning btn-lg mt-3">Get Involved</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Salimu Saley Muslim Charity Organisation. All rights reserved.
+</footer>
+
+<!-- Bootstrap JS + Popper + jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-<script>
-  localStorage.setItem('Environment', 'Web');
-  localStorage.setItem('NAME', '17ea81ea-b4fa-4b7a-8f3e-10ef438b90980f');
-  const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
-  const ROUTECSS=(DATA)=>{ const styleElement = document.createElement("style"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
-  ROUTEJS(localStorage.getItem('NOVA'));
-  ROUTECSS(localStorage.getItem('NOVASTYLES'));
-  const CloudShipping = () => {
-  import('https://eroinnovations.github.io/FrameWork/Start/Start.js')
-  .then(module => {
-    if (typeof module.START === 'function') {
-        module.START();
-      } else {
-        console.error('START is not defined in the module');
-      }
-    })
-    .catch(error => {
-      console.error('Error loading the module:', error);
-    });
-  };
-  if (localStorage.getItem('Updates')) {
-    NOVASTART();
-    } else {
-    CloudShipping();
-  };
-</script>
 </html>
